@@ -1,0 +1,23 @@
+PODS:
+  - KLCircleProgress (0.1.0)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - KLCircleProgress (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  KLCircleProgress:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KLCircleProgress: d5f215b602a0a51fb06e7e3d6400cd6003108789
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 57032a8a93ac33c804f19f6aa86454c0f7207362
+
+COCOAPODS: 1.8.3

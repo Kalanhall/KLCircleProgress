@@ -1,0 +1,6 @@
+framework module KLCircleProgress {
+  umbrella header "KLCircleProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}

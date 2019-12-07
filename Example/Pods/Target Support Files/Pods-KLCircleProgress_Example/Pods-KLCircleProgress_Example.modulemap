@@ -1,0 +1,6 @@
+framework module Pods_KLCircleProgress_Example {
+  umbrella header "Pods-KLCircleProgress_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
