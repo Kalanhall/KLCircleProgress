@@ -20,12 +20,12 @@
 }
 
 @property (nonatomic, strong) UIColor *trackTintColor;
-@property (nonatomic, assign) CGFloat animationDuration;
 @property (nonatomic, readonly) CGFloat progress;
 @property (nonatomic, assign) CGFloat backgroundRingWidth;
 @property (nonatomic, assign) CGFloat progressRingWidth; // 线宽
 @property (nonatomic, assign) BOOL isReverse;
 
+//@property (nonatomic, assign) CGFloat moveSpeed;
 @property (nonatomic, assign) CGFloat animationFromValue;
 @property (nonatomic, assign) CGFloat animationToValue;
 @property (nonatomic, assign) CFTimeInterval animationStartTime;
@@ -35,21 +35,19 @@
 @property (nonatomic, strong) UIColor *startColor;
 @property (nonatomic, strong) UIColor *endColor;
 
-@property (nonatomic) CGFloat realTimeProgress;
+@property (nonatomic, assign) CGFloat realTimeProgress;
 
 @end
 
 @implementation KLGradientView
 
-#pragma mark - Initialize -
+#pragma mark - Initialize
 
 - (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor]; // 该背景色设置会覆盖进度条
-        self.moveSpeed = 0.5;
-        self.animationDuration = 0.25f;
         
         self.trackTintColor = UIColor.clearColor;
         self.startColor = startColor;
@@ -74,7 +72,7 @@
     return self;
 }
 
-#pragma mark - Override super methods -
+#pragma mark - Override super methods
 
 - (void)drawRect:(CGRect)rect
 {
@@ -98,14 +96,14 @@
     [super setFrame:frame];
 }
 
-#pragma mark - Intrinsic content size for AutoLayout -
+#pragma mark - Intrinsic content size for AutoLayout
 
 - (CGSize)intrinsicContentSize
 {
     return CGSizeMake(UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric);
 }
 
-#pragma mark - Getters and setters -
+#pragma mark - Getters and setters
 
 - (void)setTrackTintColor:(UIColor *)trackTintColor
 {
@@ -129,15 +127,12 @@
     [self setNeedsDisplay];
 }
 
-#pragma mark - Progress -
+#pragma mark - Progress
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    if (self.progress == progress && !self.isReverse) {
-        return;
-    }
-    _animationDuration = fabs(self.progress - progress) / _moveSpeed;
-    
+    if (_progress == progress && !self.isReverse) return;
+
     if (animated == NO) {
         if (_displayLink) {
             [_displayLink invalidate];
@@ -160,7 +155,7 @@
     }
 }
 
-#pragma mark - Private methods -
+#pragma mark - Private methods
 
 - (void)animateIndeterminate:(NSTimer *)timer
 {
@@ -172,11 +167,6 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         CGFloat dt = (displayLink.timestamp - self.animationStartTime) / self.animationDuration;
-
-        if (self.animationProgressCallBack) {
-            self.animationProgressCallBack([NSString stringWithFormat:@"%.2f", dt].floatValue);
-        }
-        
         if (dt >= 1.0) {
             [self.displayLink invalidate];
             self.displayLink = nil;
@@ -246,15 +236,15 @@
         [sectorPath stroke];
     }
     
-    if (endAngle != startAngle ) {
+    if (endAngle != startAngle) {
         CGSize shadowOffset = CGSizeMake(0, 3);
         CGAffineTransform transform = CGAffineTransformMakeRotation(endAngle);
         CGSize newOffset = CGSizeApplyAffineTransform(shadowOffset, transform);
         
         NSShadow* shadow = [[NSShadow alloc] init];
-        [shadow setShadowColor: [UIColor colorWithWhite:0 alpha:0.4]];
+        [shadow setShadowColor: [UIColor colorWithWhite:0 alpha:0.3]];
         [shadow setShadowOffset: newOffset];
-        [shadow setShadowBlurRadius: 1];
+        [shadow setShadowBlurRadius:3];
         
         CGContextRef context = UIGraphicsGetCurrentContext();
         

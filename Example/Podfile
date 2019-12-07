@@ -5,6 +5,7 @@ platform :ios, '9.0'
 target 'KLCircleProgress_Example' do
   pod 'KLCircleProgress', :path => '../'
   pod 'Masonry'
+#  pod 'YKWoodpecker'
 
   target 'KLCircleProgress_Tests' do
     inherit! :search_paths

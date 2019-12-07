@@ -13,6 +13,9 @@
 @interface KLViewController ()
 
 @property (strong, nonatomic) KLCircleProgress *progressView;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -28,6 +31,7 @@
     config.startColor = [UIColor colorWithRed:251/255.0 green:212/255.0 blue:0 alpha:1];
     config.endColor = [UIColor colorWithRed:246/255.0 green:86/255.0 blue:4/255.0 alpha:1];
     config.lineWidth = 40;
+    config.animationDuration = 1;
     self.progressView = [KLCircleProgress.alloc initWithFrame:CGRectZero config:config];
     [self.view addSubview:self.progressView];
     [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -35,16 +39,23 @@
         make.center.mas_equalTo(0);
     }];
     
+    __weak typeof(self) ws = self;
     [self.progressView setProgress:0.5 animated:YES];
-    self.progressView.animationProgressCallBack = ^(CGFloat animationProgress) {
-        NSLog(@"%f", animationProgress);
-    };
+        
+
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.progressView reverseGradienColor];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.progressView reverseGradienColor];
-        });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [ws.progressView reverseGradienColor];
+        
+        __block CGFloat index = 0.5;
+        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            index += (1/20.0);
+            if (index > 1) {
+                [timer invalidate];
+            }
+            [ws.progressView setProgress:index animated:YES];
+            [ws.slider setValue:index animated:YES];
+        }];
     });
 }
 
@@ -54,8 +65,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+}
+
 - (IBAction)xxx:(UISlider *)sender {
     self.progressView.progress = sender.value;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.progressView setProgress:1 animated:YES];
+    [self.slider setValue:1 animated:YES];
 }
 
 @end

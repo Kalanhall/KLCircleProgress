@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UIColor *endColor;
 /// 线宽
 @property (assign, nonatomic) CGFloat lineWidth;
+/// 动画时间，更新动画的频率，和定时器执行频率设为一致最佳
+@property (nonatomic, assign) CGFloat animationDuration;
 
 @end
 
@@ -26,8 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 当前进度
 @property (assign, nonatomic) CGFloat progress;
-/// 动画执行进度回调，用于设置百分比展示
-@property (copy, nonatomic) void (^animationProgressCallBack)(CGFloat animationProgress);
 
 /// 渐变进度条初始化方法
 ///

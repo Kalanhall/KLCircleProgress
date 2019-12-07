@@ -26,9 +26,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = UIColor.whiteColor;
+        self.backgroundColor = UIColor.clearColor;
         self.config = config;
         
+        /// 背景视图
         _backgroundLayer = [CAShapeLayer layer];
         _backgroundLayer.fillColor = [UIColor clearColor].CGColor;
         _backgroundLayer.strokeColor = config.trackTintColor.CGColor;
@@ -40,14 +41,8 @@
                                                      startColor:config.startColor
                                                        endColor:config.endColor
                                                       lineWidth:config.lineWidth];
+        self.gradientView.animationDuration = config.animationDuration > 0 ? config.animationDuration : 1;
         [self addSubview:self.gradientView];
-        
-        __weak typeof(self) weakself = self;
-        self.gradientView.animationProgressCallBack = ^(CGFloat progress) {
-            if (weakself.animationProgressCallBack) {
-                weakself.animationProgressCallBack(progress);
-            }
-        };
     }
     return self;
 }
@@ -68,6 +63,7 @@
 /// 设置进度
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
+    _progress = progress;
     [self.gradientView setProgress:progress animated:animated];
 }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,14 +28,30 @@
                                     <action selector="xxx:" destination="whP-gf-Uak" eventType="valueChanged" id="JjZ-cf-oCp"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-bt-P2k">
+                                <rect key="frame" x="20" y="600" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ivE-ki-3om"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XbM-5M-PKU" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="16" id="6eF-WY-TCG"/>
+                            <constraint firstAttribute="trailing" secondItem="gVg-bt-P2k" secondAttribute="trailing" constant="20" id="MYM-rK-ciL"/>
                             <constraint firstAttribute="trailing" secondItem="XbM-5M-PKU" secondAttribute="trailing" constant="16" id="OCR-ak-RRf"/>
                             <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="XbM-5M-PKU" secondAttribute="bottom" constant="66" id="lqB-CE-fM1"/>
+                            <constraint firstItem="gVg-bt-P2k" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="20" id="rSj-HA-Zi5"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="gVg-bt-P2k" secondAttribute="bottom" constant="37" id="yYC-Iq-F3J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="gVg-bt-P2k" id="6HK-iB-gkU"/>
+                        <outlet property="slider" destination="XbM-5M-PKU" id="q1q-Y6-Xdd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

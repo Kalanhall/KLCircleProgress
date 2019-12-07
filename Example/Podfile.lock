@@ -1,5 +1,5 @@
 PODS:
-  - KLCircleProgress (0.1.0)
+  - KLCircleProgress (1.0.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCircleProgress: d5f215b602a0a51fb06e7e3d6400cd6003108789
+  KLCircleProgress: fc3b13f87026fbd2302eae4fd9fe11474ec832b1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 57032a8a93ac33c804f19f6aa86454c0f7207362
+PODFILE CHECKSUM: 9a3ed51bf266be583e8dceb420ead655f4032d22
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

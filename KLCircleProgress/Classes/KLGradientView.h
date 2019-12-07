@@ -11,8 +11,8 @@
 IB_DESIGNABLE
 @interface KLGradientView : UIView
 
-@property (nonatomic, assign) CGFloat moveSpeed; // 动画速度
-@property (copy, nonatomic) void (^animationProgressCallBack)(CGFloat progress);
+/// 动画时间
+@property (nonatomic, assign) CGFloat animationDuration;
 
 /// 构造初始化方法
 - (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth;
