@@ -139,6 +139,7 @@
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
+    if (progress > 1) progress = 1;
     if (_progress == progress && !self.isReverse) return;
 
     if (animated == NO) {

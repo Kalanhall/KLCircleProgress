@@ -51,12 +51,13 @@
         __block CGFloat index = 0;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
             index += (1/100.0);
+            if (index > 1) {
+                [timer invalidate];
+                return;
+            }
             [ws.progressView setProgress:index animated:YES];
             [ws.slider setValue:index animated:YES];
             ws.progressView.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", index * 100];
-            if (index > 1) {
-                [timer invalidate];
-            }
         }];
 //    });
 }
