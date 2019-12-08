@@ -228,17 +228,17 @@
     // MARK: 颜色渐变逻辑
     UIBezierPath *sectorPath;
     for (int i = 0; i < sectors; i ++) {
-        CGFloat ratio = ((float)i / ((float)sectors / 2)) ;
         CGFloat R = 0.0;
         CGFloat G = 0.0;
         CGFloat B = 0.0;
         
         UIColor *color;
         if (self.rcolors.count == 2) {
+            CGFloat part = (float)i / (float)sectors;
             // 2种颜色渐变
-            R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * ratio;
-            G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * ratio;
-            B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * ratio;
+            R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * part;
+            G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * part;
+            B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * part;
             color = [UIColor colorWithRed:R green:G blue:B alpha:1];
         } else if (self.rcolors.count == 3) {
             // 3种
