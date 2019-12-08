@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 默认轨道背景色
 @property (strong, nonatomic) UIColor *trackTintColor;
-/// 颜色渐变数组，目前最多支持4种颜色渐变
+/// 颜色渐变数组，目前最多支持4种颜色渐变，如需更多需要扩展实现逻辑
 @property (strong, nonatomic) NSArray <UIColor *> *colors;
 /// 线宽
 @property (assign, nonatomic) CGFloat lineWidth;
@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KLCircleProgress : UIView
 
+/// 中间标签
+@property (strong, nonatomic) UILabel *centerLabel;
 /// 当前进度
 @property (assign, nonatomic) CGFloat progress;
 

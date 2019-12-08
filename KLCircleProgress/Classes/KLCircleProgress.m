@@ -40,6 +40,12 @@
         self.gradientView = [KLGradientView.alloc initWithFrame:self.bounds colors:config.colors lineWidth:config.lineWidth];
         self.gradientView.animationDuration = config.animationDuration > 0 ? config.animationDuration : 1;
         [self addSubview:self.gradientView];
+        
+        self.centerLabel = UILabel.alloc.init;
+        self.centerLabel.font = [UIFont boldSystemFontOfSize:20];
+        self.centerLabel.textColor = config.colors.lastObject;
+        self.centerLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.centerLabel];
     }
     return self;
 }
@@ -49,6 +55,8 @@
     [super layoutSubviews];
     /// 重置视图尺寸
     self.gradientView.frame = self.bounds;
+    self.centerLabel.bounds = CGRectMake(0, 0, self.bounds.size.width - self.config.lineWidth * 2, 40);
+    self.centerLabel.center = self.gradientView.center;
 }
 
 -(void)setProgress:(CGFloat)progress

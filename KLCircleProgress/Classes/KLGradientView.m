@@ -206,7 +206,7 @@
 - (void)drawProgress
 {
     CGFloat startAngle = - M_PI_2;
-    CGFloat endAngle = startAngle + (2.0 * M_PI * _realTimeProgress );
+    CGFloat endAngle = startAngle + (2.0 * M_PI * _realTimeProgress);
     CGFloat trackPointEndAngle = startAngle + (2.0 * M_PI);
     CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
     CGFloat radius = (self.bounds.size.width - _progressRingWidth) / 2.0;
@@ -224,7 +224,7 @@
         angle = (endAngle - startAngle) / sectors;
         startAngleNeedDraw = startAngle;
     }
-
+    // MARK: 颜色渐变逻辑
     UIBezierPath *sectorPath;
     for (int i = 0; i < sectors; i ++) {
         CGFloat ratio = ((float)i / ((float)sectors / 2)) ;
@@ -234,7 +234,7 @@
         
         UIColor *color;
         if (self.rcolors.count == 2) {
-            // 2种
+            // 2种颜色渐变
             R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * ratio;
             G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * ratio;
             B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * ratio;
@@ -319,6 +319,7 @@
     _trackPointLayer.path = circularPath.CGPath;
 }
 
+// MARK: 颜色渐变反转
 - (void)reverseGradienColor
 {
     self.isReverse = YES;
