@@ -16,7 +16,6 @@
 @property (nonatomic, assign) CGFloat backgroundRingWidth;
 @property (nonatomic, assign) CGFloat progressRingWidth; // 线宽
 @property (nonatomic, assign) BOOL isReverse;
-
 //@property (nonatomic, assign) CGFloat moveSpeed;
 @property (nonatomic, assign) CGFloat animationFromValue;
 @property (nonatomic, assign) CGFloat animationToValue;
@@ -24,9 +23,7 @@
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, strong) CAShapeLayer *backgroundLayer;
 @property (nonatomic, strong) CAShapeLayer *trackPointLayer;
-
 @property (nonatomic, assign) CGFloat realTimeProgress;
-
 @property (strong, nonatomic) NSMutableArray <NSNumber *> *rcolors;
 @property (strong, nonatomic) NSMutableArray <NSNumber *> *gcolors;
 @property (strong, nonatomic) NSMutableArray <NSNumber *> *bcolors;
@@ -36,18 +33,10 @@
 @implementation KLGradientView
 
 #pragma mark - Initialize
-
-- (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth
-{
-    return [self initWithFrame:frame colors:@[startColor, endColor] lineWidth:lineWidth];
-}
-
 - (instancetype)initWithFrame:(CGRect)frame colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor]; // 该背景色设置会覆盖进度条
-        self.trackTintColor = UIColor.clearColor;
         
         if (colors == nil) NSAssert(colors != nil, @"colors 不可为空！至少有一个颜色");
         if (colors.count == 1) {
@@ -66,20 +55,23 @@
             [self.gcolors addObject:@(g)];
             [self.bcolors addObject:@(b)];
         }];
-
-        _backgroundRingWidth = lineWidth;
-        _progressRingWidth = lineWidth;
-
-        _backgroundLayer = [CAShapeLayer layer];
-        _backgroundLayer.fillColor = [UIColor clearColor].CGColor;
-        _backgroundLayer.strokeColor = _trackTintColor.CGColor;
-        _backgroundLayer.lineCap = kCALineCapRound;
-        _backgroundLayer.lineWidth = lineWidth;
-        [self.layer addSublayer:_backgroundLayer];
         
-        _trackPointLayer = [CAShapeLayer layer];
-        _trackPointLayer.fillColor = [UIColor clearColor].CGColor;
-        [self.layer addSublayer:_trackPointLayer];
+        self.backgroundColor = [UIColor clearColor]; // 该背景色设置会覆盖进度条
+        self.trackTintColor = UIColor.clearColor;
+        self.backgroundRingWidth = lineWidth;
+        self.progressRingWidth = lineWidth;
+
+        self.backgroundLayer = [CAShapeLayer layer];
+        self.backgroundLayer.fillColor = [UIColor clearColor].CGColor;
+        self.backgroundLayer.strokeColor = _trackTintColor.CGColor;
+        self.backgroundLayer.lineCap = kCALineCapRound;
+        self.backgroundLayer.lineWidth = lineWidth;
+        [self.layer addSublayer:self.backgroundLayer];
+        
+        // 终点标识，隐藏暂不使用
+//        self.trackPointLayer = [CAShapeLayer layer];
+//        self.trackPointLayer.fillColor = [UIColor clearColor].CGColor;
+//        [self.layer addSublayer:self.trackPointLayer];
     }
     return self;
 }
@@ -185,6 +177,10 @@
             self.displayLink = nil;
             self.realTimeProgress = self.animationToValue;
             [self setNeedsDisplay];
+            
+            if (self.animatedCompletion) {
+                self.animatedCompletion(self.progress, self.progress >= 1 - 0.001); // 减去误差
+            }
             return;
         }
 

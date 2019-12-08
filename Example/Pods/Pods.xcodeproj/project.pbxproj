@@ -13,8 +13,8 @@
 		0967598607D521318F69D7D39D517B20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75394FF91238A5EF59BC4B2A3954459C /* ViewController+MASAdditions.m */; };
 		098630ECDB64ED7B89F5F687C82B4AC3 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB18893E7090B6EDD7F654202ED09F75 /* NSArray+MASAdditions.m */; };
 		0AF1AD35706D90B1A91F291B899EF8C0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EDADDD013499C5E4BD2DCFC0F24DADC /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B7BF4985EF3158F91A59898CC3AA5D3 /* KLCircleProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D16C4D7892A4B756336B55F8CCE819 /* KLCircleProgress-dummy.m */; };
 		137A1DF8FABF16D3DCC77249619A1309 /* Pods-KLCircleProgress_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0B0E30F60693D7776400C76F983F73 /* Pods-KLCircleProgress_Example-dummy.m */; };
+		159D4F96CA1CA0101C60BAF49327CC57 /* KLGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC98496B66B947C93013834E6F67C86 /* KLGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1972E85F0FCD0F3EAF28ED7CD036286E /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E51D6091F3D5EDD29FDAE7E410F1C306 /* Masonry-dummy.m */; };
 		1A4D1F89074655F080356EA7E9280900 /* NSObject+KLTouchFaceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB392A5ED5DD8BFE07292A2074D3203 /* NSObject+KLTouchFaceID.m */; };
 		1B0B61007D500F4FD9C92448B24C66CF /* UIButton+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865D840692BE7A104CB797C9693D53A /* UIButton+KLExtension.m */; };
@@ -27,10 +27,12 @@
 		37746D26D2E8FB50709454F829FE9052 /* UIImage+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5226950274C620CE259E87F60163E70C /* UIImage+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C0BAF7F97E9D36776EA2FCB411782E0 /* UIButton+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = EC168BDD1B3676C0BAE3D46D120E5DF3 /* UIButton+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA5F1D8E51CDD102A871C2F37770C7B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8AAF1499639666188BD6EEAA7CB2A9 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		405E054F3BC37E23F7E96C0C6C64E90D /* KLGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = F726EB30C0B5DF461D86AF252E15226A /* KLGradientView.m */; };
 		4B0981F9AC628CF5100C50FF4A163A4A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1343E405BEE41496603BF19283D15C2D /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D316944D6931E5C9FD764D6773ADD2A /* Pods-KLCircleProgress_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B93BB2E8F769C0C79418F7FA49FA599 /* Pods-KLCircleProgress_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B53A3B3CE12A6998C721ED30860CFBA /* Pods-KLCircleProgress_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A17D3F1966D6A6FDBB4193AB3A9669 /* Pods-KLCircleProgress_Tests-dummy.m */; };
 		6A6AD3A5BBDBFD0B4AF936BD518EC0B1 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 487BF9960DBC799692F579000DDD6547 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70140C1F86370F6293A71E8954C735EF /* KLCircleProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C60F1D662F6A9DC0E4A108119CB1D1E /* KLCircleProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71A91EC41E438BA73441A0F52BF935BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		78B2727EE5D693F58D019DB098005101 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27BD9BF815540E7E26EFB734627F50 /* MASConstraintMaker.m */; };
 		7BFF65958F014760B6AC4742824892EB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F5A38E76759C9703995B581BC4B1AF /* MASCompositeConstraint.m */; };
@@ -39,34 +41,34 @@
 		8539B851E01A58467BE49CA3FA77223C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F92610E69CE22BCB72ED9C01249D4 /* MASLayoutConstraint.m */; };
 		865E485E96B28E6D7DC0A72CBFC23445 /* NSObject+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B49EE98DCF3E2681B535E27FBDB53 /* NSObject+KLExtension.m */; };
 		89098344C548DE0AA585772EE32E0514 /* UIView+KLExtensiton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8902510A2920961630FCCDC959199 /* UIView+KLExtensiton.m */; };
-		8B362F2DDD57890086A4786F89763171 /* KLGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B35E67C6430A9745271D371FBAA57A /* KLGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B92011C9373001132C8148BFC8F50B3 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8589EE38ED19F758307C18B81375ED /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D4D1F6E4709EBB13974E95DC1059DDC /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CBBD17C26F8B5E4ADDE2F06A8BCEE271 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D65CE579E516BDD5FB36CAA21D693F6 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6C850389C72F4CF82B58CD7EC2BE3C /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		941955A19C40899D275604E6E9C21A6D /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 53316B55D0F86451FD678EFF9D5F1E9D /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D546E1168C04B0B2EAE005D9275D18B /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C57A301F948F549B3E815ED875FE29B /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2A1C9B398884896CFF39ED9E57106D5 /* KLGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4086526E5DF3D3965D923C878BFF71F /* KLGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A35FBEEC7D088AEC05297E8292A32C77 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFEBEAAAE1FA9BC0E3BC60014E797DD /* View+MASAdditions.m */; };
+		AC7241627D6CCC9FB07238187D34C65A /* KLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = B57FF674F39EC4A1A8F62AF626E9BE93 /* KLCircleProgress.m */; };
 		AD7BFF1A0623AC7D48548C4060E2676C /* UICollectionView+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 55763E9C84C77EABC7BF6C4264B89CD5 /* UICollectionView+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4F7FA7A170B8539BD197B1C37B63B71 /* UIViewController+KLLogExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CA707B818ADE5DF21F89FEFEEDFF7FC1 /* UIViewController+KLLogExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5914BC7478A34B38B0C72E63C543A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		B7D645EC004610E8A581E532D28771EC /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DA21B7FFC18472A44CE7C71DBC4D0CFB /* MASViewConstraint.m */; };
+		B8D485CAC294A7DF82CC83C4F17937CC /* KLCircleProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C50548D89B3DD196A81E98948FA1E138 /* KLCircleProgress-dummy.m */; };
 		C0861ADB4C5FA30F4F9E051F7638A264 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A229A4698406746758B55C687EF794DA /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		C6EBEC01999B5999036A2C66405819B3 /* KLCircleProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AA521F177EB4A4796703CC8AAA6D45 /* KLCircleProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CDC51B0C78774C4D008B23FEBEB875 /* UIView+KLExtensiton.h in Headers */ = {isa = PBXBuildFile; fileRef = 936FDA44F7DB33FE0F846194D9A64764 /* UIView+KLExtensiton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE93C54413259B4AC3683B6EB874D466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
 		D314C0B92098404CCF07BF5066E0967B /* UIImage+KLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E64DB45513D900789574D76AE16336C /* UIImage+KLExtension.m */; };
 		D9FEC7F38D85C4BDFA83B407B675E843 /* UIColor+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = BA11AE83DA7F631DD92D24B32C668ECB /* UIColor+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3504C0D6EEA1D00C89158F74BAE88B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E3BEE149F4ED1B4B92DBFDC3AE6C3507 /* KLGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CB26D0BFB74B23295FEB69F058CAD1 /* KLGradientLayer.m */; };
+		E49F85A4503B41C354FFB1213096B39C /* KLCircleProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = B585A242EBA1CE284EFF2020708913B5 /* KLCircleProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E51F496BDC6ACADE04FDA059C6CB2342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		E7CA20228B3583F41927813EE904CAD3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24834B5F936367AF8273349358F97682 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8DD5D1D406150E1C80AD015271B6848 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AF55ECA6B4663CFBBF4B8207037CCD89 /* MASConstraint.m */; };
 		EAE8B0895956885A752B173683A0D889 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B4E8BD2D1887D89F5C2AB6910867E8 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F17C95C9E517421DAB3C0F9DFCD1F4B1 /* KLGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA30F023581815C352FF06739A0B93C /* KLGradientView.m */; };
-		F41BEFA8014D474F5D8036CEE3353561 /* KLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DC12C4FEBC258176957DB96028F744 /* KLCircleProgress.m */; };
 		F5B9DCAC4FD521CF4C7E76B54926F36B /* NSObject+KLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E36874D80FF6D2DECABDCB7BF19CE65B /* NSObject+KLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F65882C82964019E5C1C8B494724C710 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		FAFBFA90F7BC3E7CF50F8A5CF0A8B264 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DAA14266C1EC992098F06DBDA3038C0 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB736A7EB8EF692B064E56F74A63CE8A /* KLCategory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE8B038FF03E1230D3B19EEB79954B /* KLCategory-dummy.m */; };
-		FDE806FD81C2297D70E71B5F1B4D0B0A /* KLCircleProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE32E27B993CF4EC396CA22CC47E5395 /* KLCircleProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF86608E8745294E0F34492F475934E9 /* KLCategory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 189377E3FC8637C11B331670A6728A75 /* KLCategory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -107,18 +109,18 @@
 		0AB392A5ED5DD8BFE07292A2074D3203 /* NSObject+KLTouchFaceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLTouchFaceID.m"; path = "KLCategory/Classes/NSObject+KLTouchFaceID.m"; sourceTree = "<group>"; };
 		0C57A301F948F549B3E815ED875FE29B /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		0DAA14266C1EC992098F06DBDA3038C0 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		11FE36E4BD3DE424D1C28AA75D9A57B7 /* KLCircleProgress.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KLCircleProgress.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		12B44B8A369F2F8713646DEAB76C5AB4 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		1343E405BEE41496603BF19283D15C2D /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		1529C2E5CB2D8920F5C4A9B0688D1978 /* KLCircleProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCircleProgress.xcconfig; sourceTree = "<group>"; };
 		189377E3FC8637C11B331670A6728A75 /* KLCategory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-umbrella.h"; sourceTree = "<group>"; };
 		1E68E8A233330E198773538175698028 /* Pods-KLCircleProgress_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KLCircleProgress_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1F24948795B7C00B00566D59CEB6B3F4 /* KLCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCategory-prefix.pch"; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2051A49A8E047311DC3EA24C53A82C01 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		20EEEF54685B81CD0666420346BD1517 /* KLCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLCategory.framework; path = KLCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23D16C4D7892A4B756336B55F8CCE819 /* KLCircleProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLCircleProgress-dummy.m"; sourceTree = "<group>"; };
 		240960CC1574B8BFA261D662127A087D /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		24834B5F936367AF8273349358F97682 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		25DC12C4FEBC258176957DB96028F744 /* KLCircleProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLCircleProgress.m; path = KLCircleProgress/Classes/KLCircleProgress.m; sourceTree = "<group>"; };
+		2CC98496B66B947C93013834E6F67C86 /* KLGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLGradientView.h; path = KLCircleProgress/Classes/KLGradientView.h; sourceTree = "<group>"; };
 		2E6797011F4C649F21A023EB2FE825F8 /* NSObject+KLTouchFaceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLTouchFaceID.h"; path = "KLCategory/Classes/NSObject+KLTouchFaceID.h"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		313E4B9FB86D4CCA7219FC8AE4DF3B0D /* Pods-KLCircleProgress_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCircleProgress_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -126,23 +128,23 @@
 		35D9EEC09659598AFD2F7B888C8055BA /* UICollectionView+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+KLExtension.m"; path = "KLCategory/Classes/UICollectionView+KLExtension.m"; sourceTree = "<group>"; };
 		3A868AA1E82D9B783B09D4D349476D47 /* Pods-KLCircleProgress_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCircleProgress_Tests-Info.plist"; sourceTree = "<group>"; };
 		3BDC0F747928DBE3AC41712EA8582735 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		3C60F1D662F6A9DC0E4A108119CB1D1E /* KLCircleProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCircleProgress-umbrella.h"; sourceTree = "<group>"; };
 		3EDADDD013499C5E4BD2DCFC0F24DADC /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		3F9F92610E69CE22BCB72ED9C01249D4 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		4229B69EA18575BE0F5FD4BB2AE6AC39 /* Pods-KLCircleProgress_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCircleProgress_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		42868F94A310A71746FCD8CE7CDB8710 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		47CB26D0BFB74B23295FEB69F058CAD1 /* KLGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLGradientLayer.m; path = KLCircleProgress/Classes/KLGradientLayer.m; sourceTree = "<group>"; };
 		47D49628C93EE6ABB29FCC1069DD5AF1 /* Pods-KLCircleProgress_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KLCircleProgress_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		47F5A38E76759C9703995B581BC4B1AF /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		487BF9960DBC799692F579000DDD6547 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		487D8B9807A31B20400557520A612E66 /* KLCategory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCategory.xcconfig; sourceTree = "<group>"; };
-		4A9D16CCB51C9F3A16855C17ABF416D8 /* KLCircleProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCircleProgress-prefix.pch"; sourceTree = "<group>"; };
 		5226950274C620CE259E87F60163E70C /* UIImage+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+KLExtension.h"; path = "KLCategory/Classes/UIImage+KLExtension.h"; sourceTree = "<group>"; };
 		53316B55D0F86451FD678EFF9D5F1E9D /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		53E925132F764EF0AF7F21A890C93D3F /* Pods-KLCircleProgress_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KLCircleProgress_Example-Info.plist"; sourceTree = "<group>"; };
 		55763E9C84C77EABC7BF6C4264B89CD5 /* UICollectionView+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+KLExtension.h"; path = "KLCategory/Classes/UICollectionView+KLExtension.h"; sourceTree = "<group>"; };
 		59ECD4BC8D3976D5121B7E9352D271BC /* UIColor+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KLExtension.m"; path = "KLCategory/Classes/UIColor+KLExtension.m"; sourceTree = "<group>"; };
 		5D1BEC90C833C023949E24957A2C44AB /* Pods-KLCircleProgress_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCircleProgress_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		67AA521F177EB4A4796703CC8AAA6D45 /* KLCircleProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLCircleProgress.h; path = KLCircleProgress/Classes/KLCircleProgress.h; sourceTree = "<group>"; };
 		6918754FED4F1D3000C3C68FC1BE2DA6 /* KLCircleProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KLCircleProgress.framework; path = KLCircleProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F598F3117C6DDC80919F58241D67B3 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		6A6C850389C72F4CF82B58CD7EC2BE3C /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -152,50 +154,60 @@
 		75394FF91238A5EF59BC4B2A3954459C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		77215FABAF97CC904980CEE6A9F40662 /* UIViewController+KLLogExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KLLogExtension.m"; path = "KLCategory/Classes/UIViewController+KLLogExtension.m"; sourceTree = "<group>"; };
 		7751F3919F71149172CF5FA8D6794744 /* Pods-KLCircleProgress_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KLCircleProgress_Example.modulemap"; sourceTree = "<group>"; };
-		79D1323D5E16D9C8A8FF3A23DC29E977 /* KLCircleProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCircleProgress.modulemap; sourceTree = "<group>"; };
 		7BBABE3E89F2EF0C77B7247F4C8674FA /* Pods_KLCircleProgress_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KLCircleProgress_Tests.framework; path = "Pods-KLCircleProgress_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB7F27F22DAF7EC032F089511712E3D /* Pods-KLCircleProgress_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KLCircleProgress_Tests.modulemap"; sourceTree = "<group>"; };
-		8E3B1A41A65C1E9A85B13BAED0EC2A93 /* KLCircleProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCircleProgress-Info.plist"; sourceTree = "<group>"; };
-		92B35E67C6430A9745271D371FBAA57A /* KLGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLGradientView.h; path = KLCircleProgress/Classes/KLGradientView.h; sourceTree = "<group>"; };
+		7F86507632810E7D775AFAEDB051FDCB /* KLCircleProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCircleProgress-prefix.pch"; sourceTree = "<group>"; };
 		936FDA44F7DB33FE0F846194D9A64764 /* UIView+KLExtensiton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+KLExtensiton.h"; path = "KLCategory/Classes/UIView+KLExtensiton.h"; sourceTree = "<group>"; };
 		93C8902510A2920961630FCCDC959199 /* UIView+KLExtensiton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+KLExtensiton.m"; path = "KLCategory/Classes/UIView+KLExtensiton.m"; sourceTree = "<group>"; };
 		94999D5CD8DED007FD9FCFC994B1006C /* KLCategory-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCategory-Info.plist"; sourceTree = "<group>"; };
+		94C068EEE9F639760FFEAC4F683B9476 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9C4B49EE98DCF3E2681B535E27FBDB53 /* NSObject+KLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KLExtension.m"; path = "KLCategory/Classes/NSObject+KLExtension.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A229A4698406746758B55C687EF794DA /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		AB8589EE38ED19F758307C18B81375ED /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		ABA30F023581815C352FF06739A0B93C /* KLGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLGradientView.m; path = KLCircleProgress/Classes/KLGradientView.m; sourceTree = "<group>"; };
+		ADDDC3A5C42DC087574888A98EB2AC1F /* KLCircleProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCircleProgress.modulemap; sourceTree = "<group>"; };
 		AF55ECA6B4663CFBBF4B8207037CCD89 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		AFC999920033E66F5E2C45D0B7B2373D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B349765FF6089C14F475E10DF93CC8CF /* KLCircleProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KLCircleProgress-Info.plist"; sourceTree = "<group>"; };
 		B3EE8B038FF03E1230D3B19EEB79954B /* KLCategory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLCategory-dummy.m"; sourceTree = "<group>"; };
+		B57FF674F39EC4A1A8F62AF626E9BE93 /* KLCircleProgress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLCircleProgress.m; path = KLCircleProgress/Classes/KLCircleProgress.m; sourceTree = "<group>"; };
+		B585A242EBA1CE284EFF2020708913B5 /* KLCircleProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLCircleProgress.h; path = KLCircleProgress/Classes/KLCircleProgress.h; sourceTree = "<group>"; };
 		BA11AE83DA7F631DD92D24B32C668ECB /* UIColor+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+KLExtension.h"; path = "KLCategory/Classes/UIColor+KLExtension.h"; sourceTree = "<group>"; };
 		BB9B4DABCF985A2264AF7C0656A07689 /* KLCategory.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KLCategory.modulemap; sourceTree = "<group>"; };
 		BDFEBEAAAE1FA9BC0E3BC60014E797DD /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		BE27BD9BF815540E7E26EFB734627F50 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		C0A17D3F1966D6A6FDBB4193AB3A9669 /* Pods-KLCircleProgress_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLCircleProgress_Tests-dummy.m"; sourceTree = "<group>"; };
-		C212F1C77113615819D0A23A248854CD /* KLCircleProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KLCircleProgress.xcconfig; sourceTree = "<group>"; };
 		C42C3404AAE29FBC5FB8B5EE259F9C9B /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
+		C50548D89B3DD196A81E98948FA1E138 /* KLCircleProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KLCircleProgress-dummy.m"; sourceTree = "<group>"; };
 		C753B50DF950F2F79AEB14232B86B97C /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		C7B4E8BD2D1887D89F5C2AB6910867E8 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		C979ABC7B381B95DA61433D53E29EBFF /* KLCircleProgress.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KLCircleProgress.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CA707B818ADE5DF21F89FEFEEDFF7FC1 /* UIViewController+KLLogExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KLLogExtension.h"; path = "KLCategory/Classes/UIViewController+KLLogExtension.h"; sourceTree = "<group>"; };
 		CBBD17C26F8B5E4ADDE2F06A8BCEE271 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		D3F6007E249B2C2AB97D3CE81FAFE044 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		D99BB7179B6D75D3DC112138DA621E8E /* Pods-KLCircleProgress_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KLCircleProgress_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DA21B7FFC18472A44CE7C71DBC4D0CFB /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		DBC79F49EEFF101EFADA4968C5258050 /* Pods-KLCircleProgress_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCircleProgress_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DBE8AE0FFAA4FCE4BB6926F64298BD43 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E36874D80FF6D2DECABDCB7BF19CE65B /* NSObject+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KLExtension.h"; path = "KLCategory/Classes/NSObject+KLExtension.h"; sourceTree = "<group>"; };
+		E4086526E5DF3D3965D923C878BFF71F /* KLGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KLGradientLayer.h; path = KLCircleProgress/Classes/KLGradientLayer.h; sourceTree = "<group>"; };
 		E51D6091F3D5EDD29FDAE7E410F1C306 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		EA0B0E30F60693D7776400C76F983F73 /* Pods-KLCircleProgress_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KLCircleProgress_Example-dummy.m"; sourceTree = "<group>"; };
 		EA8AAF1499639666188BD6EEAA7CB2A9 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		EC168BDD1B3676C0BAE3D46D120E5DF3 /* UIButton+KLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+KLExtension.h"; path = "KLCategory/Classes/UIButton+KLExtension.h"; sourceTree = "<group>"; };
 		F012C91266CFAD47AD50DF8085DC0B9D /* Pods-KLCircleProgress_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCircleProgress_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F18841F44A44232E18AFE971363FD8FF /* Pods-KLCircleProgress_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCircleProgress_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F726EB30C0B5DF461D86AF252E15226A /* KLGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLGradientView.m; path = KLCircleProgress/Classes/KLGradientView.m; sourceTree = "<group>"; };
 		FB18893E7090B6EDD7F654202ED09F75 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		FE32E27B993CF4EC396CA22CC47E5395 /* KLCircleProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KLCircleProgress-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18F3D59876A757DCF709CBC639071729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5914BC7478A34B38B0C72E63C543A79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E047F76604659BF1B2099B2C412AC93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,14 +233,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB90F30763A375200B4ED91A5136F4F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F65882C82964019E5C1C8B494724C710 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BBCE17D7A59D57D13C5E105AE0A501B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,16 +244,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0202D1B03A1687601A98E72EADACB5D7 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C979ABC7B381B95DA61433D53E29EBFF /* KLCircleProgress.podspec */,
-				2051A49A8E047311DC3EA24C53A82C01 /* LICENSE */,
-				D3F6007E249B2C2AB97D3CE81FAFE044 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		05FE37BD138A6A1D11A8C4E3A56EAD25 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,32 +325,52 @@
 			path = "../Target Support Files/KLCategory";
 			sourceTree = "<group>";
 		};
-		49023E7942AF9B857B5FA787FE34630A /* KLCircleProgress */ = {
+		3C30D4244062E17E1D1391506B818D63 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				67AA521F177EB4A4796703CC8AAA6D45 /* KLCircleProgress.h */,
-				25DC12C4FEBC258176957DB96028F744 /* KLCircleProgress.m */,
-				92B35E67C6430A9745271D371FBAA57A /* KLGradientView.h */,
-				ABA30F023581815C352FF06739A0B93C /* KLGradientView.m */,
-				0202D1B03A1687601A98E72EADACB5D7 /* Pod */,
-				70BAA0D1FAAC47DD1350E79E54403C39 /* Support Files */,
+				59E4B9E5A4677D14CDB0D901E2A66602 /* KLCircleProgress */,
 			);
-			name = KLCircleProgress;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		70BAA0D1FAAC47DD1350E79E54403C39 /* Support Files */ = {
+		4C490375F4663736453988758945B622 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				79D1323D5E16D9C8A8FF3A23DC29E977 /* KLCircleProgress.modulemap */,
-				C212F1C77113615819D0A23A248854CD /* KLCircleProgress.xcconfig */,
-				23D16C4D7892A4B756336B55F8CCE819 /* KLCircleProgress-dummy.m */,
-				8E3B1A41A65C1E9A85B13BAED0EC2A93 /* KLCircleProgress-Info.plist */,
-				4A9D16CCB51C9F3A16855C17ABF416D8 /* KLCircleProgress-prefix.pch */,
-				FE32E27B993CF4EC396CA22CC47E5395 /* KLCircleProgress-umbrella.h */,
+				11FE36E4BD3DE424D1C28AA75D9A57B7 /* KLCircleProgress.podspec */,
+				AFC999920033E66F5E2C45D0B7B2373D /* LICENSE */,
+				94C068EEE9F639760FFEAC4F683B9476 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		56026C43051ED1DA2B8CCFA6A958C55C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADDDC3A5C42DC087574888A98EB2AC1F /* KLCircleProgress.modulemap */,
+				1529C2E5CB2D8920F5C4A9B0688D1978 /* KLCircleProgress.xcconfig */,
+				C50548D89B3DD196A81E98948FA1E138 /* KLCircleProgress-dummy.m */,
+				B349765FF6089C14F475E10DF93CC8CF /* KLCircleProgress-Info.plist */,
+				7F86507632810E7D775AFAEDB051FDCB /* KLCircleProgress-prefix.pch */,
+				3C60F1D662F6A9DC0E4A108119CB1D1E /* KLCircleProgress-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/KLCircleProgress";
+			sourceTree = "<group>";
+		};
+		59E4B9E5A4677D14CDB0D901E2A66602 /* KLCircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				B585A242EBA1CE284EFF2020708913B5 /* KLCircleProgress.h */,
+				B57FF674F39EC4A1A8F62AF626E9BE93 /* KLCircleProgress.m */,
+				E4086526E5DF3D3965D923C878BFF71F /* KLGradientLayer.h */,
+				47CB26D0BFB74B23295FEB69F058CAD1 /* KLGradientLayer.m */,
+				2CC98496B66B947C93013834E6F67C86 /* KLGradientView.h */,
+				F726EB30C0B5DF461D86AF252E15226A /* KLGradientView.m */,
+				4C490375F4663736453988758945B622 /* Pod */,
+				56026C43051ED1DA2B8CCFA6A958C55C /* Support Files */,
+			);
+			name = KLCircleProgress;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		74922805C44A8DB11C8F3FC504DC4568 /* Pods-KLCircleProgress_Tests */ = {
@@ -402,7 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F4092F446BA07FFC990775599BBE0FDE /* Development Pods */,
+				3C30D4244062E17E1D1391506B818D63 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				7A46ADFE705537BF6B21107512F914CB /* Pods */,
 				DA101244EC0A85CC063BC68C8CB0E24E /* Products */,
@@ -438,14 +452,6 @@
 				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		F4092F446BA07FFC990775599BBE0FDE /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				49023E7942AF9B857B5FA787FE34630A /* KLCircleProgress */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F86BE081909612E65B4CB9A079BE0B36 /* Pods-KLCircleProgress_Example */ = {
@@ -499,13 +505,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EE1B6682BCD1E0E06E9E9546A19B7AF /* Headers */ = {
+		CB91F65C0FBE192C9B8F774115F0570B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDE806FD81C2297D70E71B5F1B4D0B0A /* KLCircleProgress-umbrella.h in Headers */,
-				C6EBEC01999B5999036A2C66405819B3 /* KLCircleProgress.h in Headers */,
-				8B362F2DDD57890086A4786F89763171 /* KLGradientView.h in Headers */,
+				70140C1F86370F6293A71E8954C735EF /* KLCircleProgress-umbrella.h in Headers */,
+				E49F85A4503B41C354FFB1213096B39C /* KLCircleProgress.h in Headers */,
+				A2A1C9B398884896CFF39ED9E57106D5 /* KLGradientLayer.h in Headers */,
+				159D4F96CA1CA0101C60BAF49327CC57 /* KLGradientView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,12 +621,12 @@
 		};
 		BD95DEF7000F368C503A7F331600387B /* KLCircleProgress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B286E3951629E6A83ECEE86A2A02E77 /* Build configuration list for PBXNativeTarget "KLCircleProgress" */;
+			buildConfigurationList = F7CEF04527615BFD776651F1F7723297 /* Build configuration list for PBXNativeTarget "KLCircleProgress" */;
 			buildPhases = (
-				8EE1B6682BCD1E0E06E9E9546A19B7AF /* Headers */,
-				28A940846F826265FBA2E2FD864EE54A /* Sources */,
-				AB90F30763A375200B4ED91A5136F4F1 /* Frameworks */,
-				C6379CAD8B609D9A7545F7F46CDDA6C4 /* Resources */,
+				CB91F65C0FBE192C9B8F774115F0570B /* Headers */,
+				8C19F8E3082727B61E08155390D625A3 /* Sources */,
+				18F3D59876A757DCF709CBC639071729 /* Frameworks */,
+				C6D664D0E53CA42A1CC6810F3B814A22 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -690,7 +697,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6379CAD8B609D9A7545F7F46CDDA6C4 /* Resources */ = {
+		C6D664D0E53CA42A1CC6810F3B814A22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -718,21 +725,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28A940846F826265FBA2E2FD864EE54A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B7BF4985EF3158F91A59898CC3AA5D3 /* KLCircleProgress-dummy.m in Sources */,
-				F41BEFA8014D474F5D8036CEE3353561 /* KLCircleProgress.m in Sources */,
-				F17C95C9E517421DAB3C0F9DFCD1F4B1 /* KLGradientView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F6D4489D57C42EA7888B192BDFFAF2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				137A1DF8FABF16D3DCC77249619A1309 /* Pods-KLCircleProgress_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C19F8E3082727B61E08155390D625A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8D485CAC294A7DF82CC83C4F17937CC /* KLCircleProgress-dummy.m in Sources */,
+				AC7241627D6CCC9FB07238187D34C65A /* KLCircleProgress.m in Sources */,
+				E3BEE149F4ED1B4B92DBFDC3AE6C3507 /* KLGradientLayer.m in Sources */,
+				405E054F3BC37E23F7E96C0C6C64E90D /* KLGradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,38 +960,6 @@
 			};
 			name = Release;
 		};
-		6773153460CB9128BE57C46A010C46AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C212F1C77113615819D0A23A248854CD /* KLCircleProgress.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KLCircleProgress/KLCircleProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KLCircleProgress/KLCircleProgress-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KLCircleProgress/KLCircleProgress.modulemap";
-				PRODUCT_MODULE_NAME = KLCircleProgress;
-				PRODUCT_NAME = KLCircleProgress;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		78F12B60F18359B4C667439A9C225E26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F18841F44A44232E18AFE971363FD8FF /* Pods-KLCircleProgress_Tests.release.xcconfig */;
@@ -1173,9 +1149,9 @@
 			};
 			name = Debug;
 		};
-		9D43CEE3689995E00FBB36718AC8226A /* Debug */ = {
+		9756C3FD14666B86DEF87F5CE855841F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C212F1C77113615819D0A23A248854CD /* KLCircleProgress.xcconfig */;
+			baseConfigurationReference = 1529C2E5CB2D8920F5C4A9B0688D1978 /* KLCircleProgress.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1203,6 +1179,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		D6FD22ADA5ABD69C0B2EF226DDDB1C23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1529C2E5CB2D8920F5C4A9B0688D1978 /* KLCircleProgress.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KLCircleProgress/KLCircleProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KLCircleProgress/KLCircleProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KLCircleProgress/KLCircleProgress.modulemap";
+				PRODUCT_MODULE_NAME = KLCircleProgress;
+				PRODUCT_NAME = KLCircleProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		DBDCD24C2C654E0BCB0E29A1F0DB9354 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1249,15 +1257,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B286E3951629E6A83ECEE86A2A02E77 /* Build configuration list for PBXNativeTarget "KLCircleProgress" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D43CEE3689995E00FBB36718AC8226A /* Debug */,
-				6773153460CB9128BE57C46A010C46AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8124039AE324A8CF9D6B9D13F35B7A4C /* Build configuration list for PBXNativeTarget "Pods-KLCircleProgress_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1290,6 +1289,15 @@
 			buildConfigurations = (
 				46D0C14B052E376F8A4B0917775088BC /* Debug */,
 				413A147D50C036F8DE10E9AF0CF35C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7CEF04527615BFD776651F1F7723297 /* Build configuration list for PBXNativeTarget "KLCircleProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9756C3FD14666B86DEF87F5CE855841F /* Debug */,
+				D6FD22ADA5ABD69C0B2EF226DDDB1C23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

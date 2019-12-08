@@ -13,10 +13,15 @@
 
 @interface KLViewController ()
 
-@property (strong, nonatomic) KLCircleProgress *progressView;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSTimer *timer1;
+@property (strong, nonatomic) NSTimer *timer2;
+@property (strong, nonatomic) NSTimer *timer3;
+
+@property (strong, nonatomic) KLCircleProgress *progressView1;
+@property (strong, nonatomic) KLCircleProgress *progressView2;
+@property (strong, nonatomic) KLCircleProgress *progressView3;
 
 @end
 
@@ -25,41 +30,101 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     KLCircleConfig *config = KLCircleConfig.alloc.init;
     config.trackTintColor = [UIColor colorWithRed:254/255.0 green:247/255.0 blue:204/255.0 alpha:1];
-    config.colors = @[[UIColor kl_colorWithHexNumber:0x2ACAF7], [UIColor kl_colorWithHexNumber:0xEAE115], [UIColor kl_colorWithHexNumber:0xFF5500], UIColor.purpleColor];
+    config.colors = @[[UIColor kl_colorWithHexNumber:0x2ACAF7], [UIColor kl_colorWithHexNumber:0xEAE115], [UIColor kl_colorWithHexNumber:0xFF5500]];
     config.lineWidth = 30;
     config.animationDuration = 1;
-    self.progressView = [KLCircleProgress.alloc initWithFrame:CGRectZero config:config];
-    self.progressView.centerLabel.text = @"0℃";
-    [self.view addSubview:self.progressView];
-    [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.mas_equalTo(200);
+    config.circleType = KLCircleTypeGradientView;
+    self.progressView1 = [KLCircleProgress.alloc initWithFrame:CGRectZero config:config];
+    self.progressView1.centerLabel.text = @"0℃";
+    [self.view addSubview:self.progressView1];
+    [self.progressView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(self.view.mas_height).multipliedBy(1/3.5);
+        make.centerX.mas_equalTo(0);
+        make.top.mas_equalTo(20);
+    }];
+
+    __weak typeof(self) ws = self;
+    __block CGFloat index = 0;
+    self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        index += (1/10.0);
+        if (index >= 1) {
+            [timer invalidate];
+            return;
+        }
+        [ws.progressView1 setProgress:index animated:YES];
+        ws.progressView1.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", index * 100];
+        [ws.slider setValue:index animated:YES];
+    }];
+
+    self.progressView1.animatedCompletion = ^(CGFloat progress, BOOL finish) {
+        NSLog(@"progressView1 finish %f %d", progress, finish);
+    };
+    
+    config = KLCircleConfig.alloc.init;
+    config.trackTintColor = [UIColor colorWithRed:254/255.0 green:247/255.0 blue:204/255.0 alpha:1];
+    config.colors = @[[UIColor kl_colorWithHexNumber:0xEAE115], [UIColor kl_colorWithHexNumber:0xFF5500]];
+    config.lineWidth = 30;
+    config.animationDuration = 1;
+    config.circleType = KLCircleTypeGradientView;
+    self.progressView2 = [KLCircleProgress.alloc initWithFrame:CGRectZero config:config];
+    self.progressView2.centerLabel.text = @"0℃";
+    [self.view addSubview:self.progressView2];
+    [self.progressView2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(self.view.mas_height).multipliedBy(1/3.5);
         make.center.mas_equalTo(0);
     }];
     
-//    [self.slider setValue:0.5 animated:YES];
-//    [self.progressView setProgress:0.5 animated:YES];
-        
+    __block CGFloat index2 = 0;
+    self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        index2 += (1/10.0);
+        if (index2 >= 1) {
+            [timer invalidate];
+            return;
+        }
+        [ws.progressView2 setProgress:index2 animated:YES];
+        ws.progressView2.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", index2 * 100];
+    }];
 
-    __weak typeof(self) ws = self;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [ws.progressView reverseGradienColor];
-        
-        __block CGFloat index = 0;
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            index += (1/100.0);
-            if (index > 1) {
-                [timer invalidate];
-                return;
-            }
-            [ws.progressView setProgress:index animated:YES];
-            [ws.slider setValue:index animated:YES];
-            ws.progressView.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", index * 100];
-        }];
-//    });
+    self.progressView2.animatedCompletion = ^(CGFloat progress, BOOL finish) {
+        NSLog(@"progressView2 finish %f %d", progress, finish);
+    };
+    
+    config = KLCircleConfig.alloc.init;
+    config.trackTintColor = [UIColor colorWithRed:254/255.0 green:247/255.0 blue:204/255.0 alpha:1];
+    config.lineWidth = 30;
+    config.animationDuration = 1;
+    config.circleType = KLCircleTypeGradientLayer;
+    config.colors = @[[UIColor kl_colorWithHexNumber:0xC10D00],
+                      [UIColor kl_colorWithHexNumber:0xFF6A00],
+                      [UIColor kl_colorWithHexNumber:0xC20E02]];
+    self.progressView3 = [KLCircleProgress.alloc initWithFrame:CGRectZero config:config];
+    self.progressView3.centerLabel.text = @"0℃";
+    [self.view addSubview:self.progressView3];
+    [self.progressView3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(self.view.mas_height).multipliedBy(1/3.5);
+        make.centerX.mas_equalTo(0);
+        make.bottom.mas_equalTo(-20);
+    }];
+//    self.progressView3.progress = 0.6;
+    
+    __block CGFloat index3 = 0;
+    self.timer3 = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        index3 += (1/10.0);
+        if (index3 >= 1) {
+            [timer invalidate];
+            return;
+        }
+        [ws.progressView3 setProgress:index3 animated:YES];
+        ws.progressView3.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", index3 * 100];
+    }];
+
+    self.progressView3.animatedCompletion = ^(CGFloat progress, BOOL finish) {
+        NSLog(@"progressView3 finish %f %d", progress, finish);
+    };
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,15 +138,15 @@
 }
 
 - (IBAction)xxx:(UISlider *)sender {
-    [self.timer invalidate];
-    self.progressView.progress = sender.value;
-    self.progressView.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", sender.value * 100];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.timer invalidate];
-    [self.progressView setProgress:1 animated:YES];
-    [self.slider setValue:1 animated:YES];
+    [self.timer1 invalidate];
+    [self.timer2 invalidate];
+    [self.timer3 invalidate];
+    self.progressView1.progress = sender.value;
+    self.progressView1.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", sender.value * 100];
+    self.progressView2.progress = sender.value;
+    self.progressView2.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", sender.value * 100];
+    self.progressView3.progress = sender.value;
+    self.progressView3.centerLabel.text = [NSString stringWithFormat:@"%.0f℃", sender.value * 100];
 }
 
 @end

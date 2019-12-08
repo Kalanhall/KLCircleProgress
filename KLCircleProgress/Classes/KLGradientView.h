@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 @interface KLGradientView : UIView
 
 /// 动画时间
 @property (nonatomic, assign) CGFloat animationDuration;
+@property (nonatomic, copy) void (^animatedCompletion)(CGFloat progress, BOOL finish);
 
 /// 构造初始化方法
-- (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth;
 - (instancetype)initWithFrame:(CGRect)frame colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth;
 /// 设置进度
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated;

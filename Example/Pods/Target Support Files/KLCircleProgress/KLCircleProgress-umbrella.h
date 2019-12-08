@@ -11,6 +11,7 @@
 #endif
 
 #import "KLCircleProgress.h"
+#import "KLGradientLayer.h"
 #import "KLGradientView.h"
 
 FOUNDATION_EXPORT double KLCircleProgressVersionNumber;
