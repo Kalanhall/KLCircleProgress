@@ -49,6 +49,10 @@
         self.backgroundColor = [UIColor clearColor]; // 该背景色设置会覆盖进度条
         self.trackTintColor = UIColor.clearColor;
         
+        if (colors == nil) NSAssert(colors != nil, @"colors 不可为空！至少有一个颜色");
+        if (colors.count == 1) {
+            colors = @[colors.firstObject, colors.firstObject]; // 特殊处理下一种颜色的场景
+        }
         self.rcolors = NSMutableArray.array;
         self.gcolors = NSMutableArray.array;
         self.bcolors = NSMutableArray.array;
