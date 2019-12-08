@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 默认轨道背景色
 @property (strong, nonatomic) UIColor *trackTintColor;
-/// 渐变开始颜色
-@property (strong, nonatomic) UIColor *startColor;
-/// 渐变结束颜色
-@property (strong, nonatomic) UIColor *endColor;
+/// 颜色渐变数组，目前最多支持4种颜色渐变
+@property (strong, nonatomic) NSArray <UIColor *> *colors;
 /// 线宽
 @property (assign, nonatomic) CGFloat lineWidth;
 /// 动画时间，更新动画的频率，和定时器执行频率设为一致最佳

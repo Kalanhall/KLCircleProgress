@@ -16,6 +16,7 @@ IB_DESIGNABLE
 
 /// 构造初始化方法
 - (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth;
+- (instancetype)initWithFrame:(CGRect)frame colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth;
 /// 设置进度
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 

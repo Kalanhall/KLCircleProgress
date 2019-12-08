@@ -1,12 +1,16 @@
 PODS:
+  - KLCategory (1.0.3)
   - KLCircleProgress (1.0.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - KLCategory
   - KLCircleProgress (from `../`)
   - Masonry
 
 SPEC REPOS:
+  https://github.com/Kalanhall/Specs.git:
+    - KLCategory
   trunk:
     - Masonry
 
@@ -15,9 +19,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  KLCategory: d4bbc38166372f1db7938a448ce2743eea42849f
   KLCircleProgress: fc3b13f87026fbd2302eae4fd9fe11474ec832b1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 9a3ed51bf266be583e8dceb420ead655f4032d22
+PODFILE CHECKSUM: 01eb568f34b8e326fb0d1e6608e7d3b13a346172
 
 COCOAPODS: 1.8.4

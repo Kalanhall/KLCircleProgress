@@ -1,11 +1,13 @@
 use_frameworks!
+source 'https://cdn.cocoapods.org/'
+source 'https://github.com/Kalanhall/Specs.git'
 
 platform :ios, '9.0'
 
 target 'KLCircleProgress_Example' do
   pod 'KLCircleProgress', :path => '../'
   pod 'Masonry'
-#  pod 'YKWoodpecker'
+  pod 'KLCategory'
 
   target 'KLCircleProgress_Tests' do
     inherit! :search_paths

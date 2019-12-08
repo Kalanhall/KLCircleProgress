@@ -10,14 +10,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @interface KLGradientView ()
-{
-    CGFloat beginR;
-    CGFloat beginG;
-    CGFloat beginB;
-    CGFloat endR;
-    CGFloat endG;
-    CGFloat endB;
-}
 
 @property (nonatomic, strong) UIColor *trackTintColor;
 @property (nonatomic, readonly) CGFloat progress;
@@ -32,10 +24,12 @@
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, strong) CAShapeLayer *backgroundLayer;
 @property (nonatomic, strong) CAShapeLayer *trackPointLayer;
-@property (nonatomic, strong) UIColor *startColor;
-@property (nonatomic, strong) UIColor *endColor;
 
 @property (nonatomic, assign) CGFloat realTimeProgress;
+
+@property (strong, nonatomic) NSMutableArray <NSNumber *> *rcolors;
+@property (strong, nonatomic) NSMutableArray <NSNumber *> *gcolors;
+@property (strong, nonatomic) NSMutableArray <NSNumber *> *bcolors;
 
 @end
 
@@ -45,15 +39,29 @@
 
 - (instancetype)initWithFrame:(CGRect)frame startColor:(UIColor *)startColor endColor:(UIColor *)endColor lineWidth:(CGFloat)lineWidth
 {
+    return [self initWithFrame:frame colors:@[startColor, endColor] lineWidth:lineWidth];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth
+{
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor]; // 该背景色设置会覆盖进度条
-        
         self.trackTintColor = UIColor.clearColor;
-        self.startColor = startColor;
-        self.endColor = endColor;
-        [self.startColor getRed:&beginR green:&beginG blue:&beginB alpha:nil];
-        [self.endColor getRed:&endR green:&endG blue:&endB alpha:nil];
+        
+        self.rcolors = NSMutableArray.array;
+        self.gcolors = NSMutableArray.array;
+        self.bcolors = NSMutableArray.array;
+        [colors enumerateObjectsUsingBlock:^(UIColor * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            // 收集R G B各颜色数组
+            CGFloat r;
+            CGFloat g;
+            CGFloat b;
+            [obj getRed:&r green:&g blue:&b alpha:nil];
+            [self.rcolors addObject:@(r)];
+            [self.gcolors addObject:@(g)];
+            [self.bcolors addObject:@(b)];
+        }];
 
         _backgroundRingWidth = lineWidth;
         _progressRingWidth = lineWidth;
@@ -203,7 +211,7 @@
     CGPoint center = CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.width / 2.0);
     CGFloat radius = (self.bounds.size.width - _progressRingWidth) / 2.0;
     
-    int sectors = 80;
+    int sectors = (int)self.rcolors.count * 30;
     float angle ;
     
     CGFloat startAngleNeedDraw ;
@@ -219,20 +227,64 @@
 
     UIBezierPath *sectorPath;
     for (int i = 0; i < sectors; i ++) {
-        CGFloat ratio = (float)i / (float)sectors ;
-        CGFloat R = beginR + (endR - beginR) * ratio ;
-        CGFloat G = beginG + (endG - beginG) * ratio ;
-        CGFloat B = beginB + (endB - beginB) * ratio ;
+        CGFloat ratio = ((float)i / ((float)sectors / 2)) ;
+        CGFloat R = 0.0;
+        CGFloat G = 0.0;
+        CGFloat B = 0.0;
+        
+        UIColor *color;
+        if (self.rcolors.count == 2) {
+            // 2种
+            R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * ratio;
+            G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * ratio;
+            B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * ratio;
+            color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+        } else if (self.rcolors.count == 3) {
+            // 3种
+            CGFloat part = sectors / 2;
+            if (i <= part) {
+                R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * ((float)i / ((float)sectors / 2));
+                G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * ((float)i / ((float)sectors / 2));
+                B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * ((float)i / ((float)sectors / 2));
+                color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+            }
+            else {
+                R = self.rcolors[1].floatValue + (self.rcolors[2].floatValue - self.rcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 2));
+                G = self.gcolors[1].floatValue + (self.gcolors[2].floatValue - self.gcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 2));
+                B = self.bcolors[1].floatValue + (self.bcolors[2].floatValue - self.bcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 2));
+                color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+            }
+        }  else {
+            // 4种
+            CGFloat part = sectors / 3;
+            if (i <= part) {
+                R = self.rcolors[0].floatValue + (self.rcolors[1].floatValue - self.rcolors[0].floatValue) * ((float)i / ((float)sectors / 3));
+                G = self.gcolors[0].floatValue + (self.gcolors[1].floatValue - self.gcolors[0].floatValue) * ((float)i / ((float)sectors / 3));
+                B = self.bcolors[0].floatValue + (self.bcolors[1].floatValue - self.bcolors[0].floatValue) * ((float)i / ((float)sectors / 3));
+                color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+            }
+            else if (i <= part * 2) {
+                R = self.rcolors[1].floatValue + (self.rcolors[2].floatValue - self.rcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 3));
+                G = self.gcolors[1].floatValue + (self.gcolors[2].floatValue - self.gcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 3));
+                B = self.bcolors[1].floatValue + (self.bcolors[2].floatValue - self.bcolors[1].floatValue) * (((float)i - part) / ((float)sectors / 3));
+                color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+            }
+            else {
+                R = self.rcolors[2].floatValue + (self.rcolors[3].floatValue - self.rcolors[2].floatValue) * (((float)i - part * 2) / ((float)sectors / 3));
+                G = self.gcolors[2].floatValue + (self.gcolors[3].floatValue - self.gcolors[2].floatValue) * (((float)i - part * 2) / ((float)sectors / 3));
+                B = self.bcolors[2].floatValue + (self.bcolors[3].floatValue - self.bcolors[2].floatValue) * (((float)i - part * 2) / ((float)sectors / 3));
+                color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+            }
+        }
 
         sectorPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startAngleNeedDraw + i * angle endAngle:startAngleNeedDraw + (i + 1) * angle + 0.001 clockwise:YES];
         if (i == 0) {
             sectorPath.lineCapStyle = kCGLineCapRound;
         }
-        UIColor *color = [UIColor colorWithRed:R green:G blue:B alpha:1];
+
         [sectorPath setLineWidth:_progressRingWidth];
         [sectorPath setLineCapStyle:kCGLineCapRound];
         [color setStroke];
-        
         [sectorPath stroke];
     }
     
@@ -251,7 +303,7 @@
         sectorPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:endAngle - angle endAngle:endAngle clockwise:YES];
         CGContextSaveGState(context);
         
-        UIColor *color = [UIColor colorWithRed:endR green:endG blue:endB alpha:1];
+        UIColor *color = [UIColor colorWithRed:self.rcolors.lastObject.floatValue green:self.gcolors.lastObject.floatValue blue:self.bcolors.lastObject.floatValue alpha:1];
         [sectorPath setLineWidth:_progressRingWidth];
         [sectorPath setLineCapStyle:kCGLineCapRound];
         
@@ -270,12 +322,9 @@
 - (void)reverseGradienColor
 {
     self.isReverse = YES;
-    UIColor *st = self.startColor;
-    self.startColor = self.endColor;
-    self.endColor = st;
-    
-    [self.startColor getRed:&beginR green:&beginG blue:&beginB alpha:nil];
-    [self.endColor getRed:&endR green:&endG blue:&endB alpha:nil];
+    self.rcolors = [self.rcolors reverseObjectEnumerator].allObjects.mutableCopy;
+    self.gcolors = [self.gcolors reverseObjectEnumerator].allObjects.mutableCopy;
+    self.bcolors = [self.bcolors reverseObjectEnumerator].allObjects.mutableCopy;
     [self setProgress:self.progress animated:YES];
     self.isReverse = NO;
 }

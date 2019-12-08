@@ -37,10 +37,7 @@
         _backgroundLayer.lineWidth = config.lineWidth;
         [self.layer addSublayer:_backgroundLayer];
         
-        self.gradientView = [KLGradientView.alloc initWithFrame:self.bounds
-                                                     startColor:config.startColor
-                                                       endColor:config.endColor
-                                                      lineWidth:config.lineWidth];
+        self.gradientView = [KLGradientView.alloc initWithFrame:self.bounds colors:config.colors lineWidth:config.lineWidth];
         self.gradientView.animationDuration = config.animationDuration > 0 ? config.animationDuration : 1;
         [self addSubview:self.gradientView];
     }
